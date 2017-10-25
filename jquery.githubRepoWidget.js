@@ -59,12 +59,12 @@
 			+'</div>'
 			+'</div>'
 			+'<div class="github-box-content">'
-			+'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'
+			+'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">了解详情</a></p>'
 			+'<p class="link"></p>'
 			+'</div>'
 			+'<div class="github-box-download">'
 			+'<div class="updated"></div>'
-			+'<a class="download" href="' + repoUrl + '/zipball/master" title="Get an archive of this repository">Download as zip</a>'
+			+'<a class="download" href="' + repoUrl + '/zipball/master" title="Get an archive of this repository">下载为 zip 文件</a>'
 			+'</div>'
 			+'</div>'
 		);
@@ -85,7 +85,7 @@
 				$widget.find('.watchers').text(repo.watchers);
 				$widget.find('.forks').text(repo.forks);
 				$widget.find('.description span').text(repo.description);
-				$widget.find('.updated').html('Latest commit to the <strong>' + repo.default_branch + '</strong> branch on ' + pushed_at);
+				$widget.find('.updated').html('最近提交的分支 <strong>' + repo.default_branch + '</strong>，时间 ' + pushed_at);
 
 				// Don't show "null" if the repo has no homepage URL.
 				if(repo.homepage != null) $widget.find('.link').append($('<a />').attr('href', repo.homepage).text(repo.homepage));
